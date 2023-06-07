@@ -1,6 +1,6 @@
 {
   "name": "@dumiorg/coursehouse-common",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "publish": "npm version patch && npm publish"
+    "publish": "npm version patch && yarn build && npm publish"
   },
   "author": "",
   "license": "ISC",
