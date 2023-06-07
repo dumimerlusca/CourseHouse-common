@@ -1,3 +1,5 @@
 export interface User {
-  [key: string]: any; // TODO Change
+  id: string;
+  name: string;
+  isAdmin: boolean;
 }
