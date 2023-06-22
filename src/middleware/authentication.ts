@@ -43,3 +43,13 @@ export const authenticationRequired = (
 
   next();
 };
+
+export const adminOnly = (req: Request, res: Response, next: NextFunction) => {
+  const { currentUser } = req;
+
+  if (!currentUser || !currentUser.isAdmin) {
+    throw new HttpException(401, "Unauthorized");
+  }
+
+  next();
+};
